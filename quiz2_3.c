@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,k=0,i,j,x,y=0,z,a=0,s;
+    int n,k=0,i,j,x,y=0,z,a=0,s,u=10;
     int num[7];
 
     scanf("%d",&n);
@@ -10,7 +10,9 @@ int main()
     {
         s=i;
         k=1;
-        while(s>10)
+        if(s==(u*10))
+            u=u*10;
+        while(s>=u)
         {
             num[k]=s%10;
             s=s/10;
@@ -26,7 +28,6 @@ int main()
 
             if(x==0)
                 y++;
-            printf("%d - %d = %d >%d %d\n",num[k],num[j],x,y,z);
         }
         if((z==2)||(y==z))
             a++;
